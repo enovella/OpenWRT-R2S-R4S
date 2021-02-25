@@ -151,16 +151,19 @@ jobs:
           mkdir -p ./artifact/
           mv openwrt/bin/targets/rockchip/armv8/*sysupgrade.img* ./artifact/
           cd ./artifact/
+          ls -Ahl
           gzip -d *.gz && exit 0
-          gzip --best --keep *.img
+          gzip --best *.img
+          ls -Ahl
+          sha256sum openwrt*r2s* | tee R2S-QC-$(date +%Y-%m-%d)-21.02.sha256sum
+          sha256sum openwrt*r4s* | tee R4S-QC-$(date +%Y-%m-%d)-21.02.sha256sum
           zip R2S-QC-$(date +%Y-%m-%d)-21.02-ext4.zip *r2s*ext4*
           zip R2S-QC-$(date +%Y-%m-%d)-21.02-sfs.zip *r2s*squashfs*
           zip R4S-QC-$(date +%Y-%m-%d)-21.02-ext4.zip *r4s*ext4*
           zip R4S-QC-$(date +%Y-%m-%d)-21.02-sfs.zip *r4s*squashfs*
           cp ../openwrt/*.config ./
           ls -Ahl
-          sha256sum openwrt*r2s* | tee R2S-QC-$(date +%Y-%m-%d)-21.02.sha256sum
-          sha256sum openwrt*r4s* | tee R4S-QC-$(date +%Y-%m-%d)-21.02.sha256sum
+
       - name: Upload artifact
         uses: actions/upload-artifact@main
         if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
