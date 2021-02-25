@@ -1,6 +1,6 @@
 ## OpenWrt R2S and R4S Firmware 
 #### ⚠ WARNING: USE IT UNDER YOUR OWN RISK. Non profit use only ⚠ 
-![OpenWRT for R2S and R4S ](https://github.com/quintus-lab/Openwrt-R2S-R4S/workflows/OpenWRT-NanoPi-Firmware/badge.svg)
+[![OpenWRT-snapshot-R2S-R4S](https://github.com/quintus-lab/OpenWRT-R2S-R4S/actions/workflows/nanopi-openwrt.yml/badge.svg)](https://github.com/quintus-lab/OpenWRT-R2S-R4S/actions/workflows/nanopi-openwrt.yml)
 
 ##### Download: [Releases](https://github.com/quintus-lab/Openwrt-R2S/releases) or [Actions](https://github.com/quintus-lab/Openwrt-R2S-R4S/actions) \(Login Needed\)
 - - -
