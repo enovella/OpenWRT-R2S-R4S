@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 
-name: OpenWRT-NanoPi-Firmware
+name: OpenWRT-21.02-R4S-R2S
 
 on:
 #  release:
@@ -11,11 +11,12 @@ on:
     branches:
       - 21.02
     paths:
-      - '.github/workflows/nanopi-openwrt.yml'
+      - '.github/workflows/nanopi-openwrt-2102.yml'
+      - 'step/00-prepare_openwrt.sh'
       - 'step/01-prepare_package.sh'
       - 'seed/nanopi.seed'
   schedule:
-    - cron: 35 20 * * *
+    - cron: 30 19 * * *
   watch:
     types: started
 
