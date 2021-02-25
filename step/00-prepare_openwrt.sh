@@ -6,6 +6,9 @@ sed -i '5s/src-git/#src-git/g' ./feeds.conf.default
 echo 'src-git addon https://github.com/quintus-lab/openwrt-package' >> ./feeds.conf.default
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
+#temp patch kernel 5.4.100
+patch -p1 < ../patches/5.4.100.patch
+
 #patch jsonc
 patch -p1 < ../patches/0000-use_json_object_new_int64.patch
 #Add upx-ucl support
