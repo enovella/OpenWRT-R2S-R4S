@@ -34,7 +34,6 @@ cp -f ../patches/911-dnsmasq-filter-aaaa.patch package/network/services/dnsmasq/
 #Fullcone patch
 patch -p1 < ../patches/1002-add-fullconenat-support.patch
 patch -p1 < ../patches/1003-luci-app-firewall_add_fullcone.patch
-patch -p1 < ../patches/1004-netconntrack-k54.patch
 
 #update curl
 rm -rf ./package/network/utils/curl
