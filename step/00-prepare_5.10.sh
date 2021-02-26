@@ -26,6 +26,7 @@ cp -f ../patches/911-dnsmasq-filter-aaaa.patch package/network/services/dnsmasq/
 #Fullcone patch
 patch -p1 < ../patches/1002-add-fullconenat-support.patch
 patch -p1 < ../patches/1003-luci-app-firewall_add_fullcone.patch
+# for 5.10
 patch -p1 < ../patches/1004-netconntrack.patch
 #update curl
 svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/network/utils/curl package/network/utils/curl
