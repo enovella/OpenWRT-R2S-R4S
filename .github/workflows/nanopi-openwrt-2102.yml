@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 
-name: OpenWRT-21.02-R4S-R2S
+name: OpenWRT-21.02
 
 on:
 #  release:
