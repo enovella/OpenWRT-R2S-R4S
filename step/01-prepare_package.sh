@@ -28,11 +28,6 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan package/le
 #GCC-10 patch
 wget https://patch-diff.githubusercontent.com/raw/coolsnowwolf/lede/pull/6433.patch
 patch -p1 < ./6433.patch
-#temp patch
-wget https://patch-diff.githubusercontent.com/raw/fw876/helloworld/pull/394.patch
-pushd package/lean/
-patch -p1 < ../../394.patch
-popd
 
 #wrt bw monitor
 git clone -b master --single-branch https://github.com/brvphoenix/wrtbwmon package/new/wrtbwmon
