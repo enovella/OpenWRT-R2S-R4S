@@ -25,11 +25,6 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dns2socks package
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks package/lean/ipt2socks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs package/lean/simple-obfs
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan package/lean/trojan
-#temp patch
-wget https://patch-diff.githubusercontent.com/raw/fw876/helloworld/pull/394.patch
-pushd package/lean/
-patch -p1 < ../../394.patch
-popd
 
 #wrt bw monitor
 git clone -b master --single-branch https://github.com/brvphoenix/wrtbwmon package/new/wrtbwmon
