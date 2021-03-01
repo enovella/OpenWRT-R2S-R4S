@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 
-name: OpenWRT-snapshot-R2S-R4S
+name: OpenWRT-snapshot
 
 on:
 #  release:
